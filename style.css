@@ -21,6 +21,11 @@ img {
     height: auto;
 }
 
+/* I struggled to center the elements. 
+I tried margin:auto and dividing the page into a grid. None of these worked satisfyingly. 
+The fixed position is useful in so far that the elements don't move when you resize the window.
+With the inspector, you can see they actually wrote it in the HTML with the container <center></center> */
+
 .logo {
     position: fixed;
     top: 35%;
@@ -63,6 +68,7 @@ button {
     cursor: pointer;
     margin-right: 5px;
     -webkit-appearance: none;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -87,8 +93,54 @@ p {
     text-decoration: none;
 }
 
-.footer nav a {
+/* Don't forget that elements don't need a dot in front, only classes do!
+If something's not working as you expect, look over your code before jumping to other solutions.
+Sometimes you're simply missing quotes or a bracket.. */
+
+footer {
     position: fixed;
-    top: 100%;
+    bottom: 0;
     left: 0;
+    background-color: #f2f2f2;
+    clear: both;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,.54);
+    border-top: 1px solid #e4e4e4;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.footer1 {
+    font-size: 15px;
+    margin-left: 30px;
+    padding: 15px 0;
+}
+
+.wrap {
+    display: block;
+    border-top: 1px solid #e4e4e4;
+    word-spacing: 1.7em;
+}
+
+.footer2 {
+    float: left;
+    font-size: 13px;
+    margin-left: 30px;
+    padding: 15px 0;
+}
+
+.footer3 {
+    float: right;
+    width: 200px;
+    font-size: 13px;
+    margin-right: 20px;
+    padding: 15px 0;
+    color: rgba(0,0,0,.54);
+    text-decoration: none;
+}
+
+footer a {
+    color: rgba(0,0,0,.54);
+    text-decoration: none;
 }
