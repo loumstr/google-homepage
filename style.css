@@ -3,6 +3,16 @@
     padding:0;
 }
 
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
 .navigation {
     float: right;
     padding-top: 20px;
@@ -14,6 +24,7 @@
     font-family: Arial, serif;
     font-size: 13px;
     color: black;
+    height: 80px;
 }
 
 img {
@@ -21,38 +32,16 @@ img {
     height: auto;
 }
 
-/* I struggled to center the elements. 
-I tried margin:auto and dividing the page into a grid. None of these worked satisfyingly. 
-The fixed position is useful in so far that the elements don't move when you resize the window.
-With the inspector, you can see they actually wrote it in the HTML with the container <center></center> */
-
-.logo {
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.search-bar {
-    position: fixed;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.languages a {
+    color: darkblue;
+    text-decoration: none;
 }
 
 .search-bar input {
     width: 500px;
-    height: 42px;
+    height: 46px;
     border-radius: 20px;
     border: lightgrey solid 1px;
-}
-
-.buttons {
-    position: fixed;
-    top: 53%;
-    left: 50%;
-    transform: translate(-45%, 0);
-    text-align: center;
 }
 
 button {
@@ -75,27 +64,53 @@ button:hover {
     border: 1px solid #5F6368;
 }
 
-.languages {
+/* I struggled to center the elements. 
+I tried margin:auto and dividing the page into a grid. None of these worked satisfyingly. 
+The fixed position is useful in so far that the elements don't move when you resize the window from side to side.
+But they DO collapse into each other when you move shrink the browser vertically.*/
+
+main {
+    height: 400px;
+    width: 500px;
+    display: block;
     position: fixed;
-    top: 63%;
+    top: 150px;
     left: 50%;
-    transform: translate(-45%, 0);
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    position: absolute;
+    top: 45px;
+    left: 115px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+}
+
+.buttons {
+    position: absolute;
+    top: 240px;
+    width: 100%;
     text-align: center;
 }
 
-p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+.languages {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    text-align: center;
 }
 
-.languages a {
-    color: darkblue;
-    text-decoration: none;
-}
 
-/* Don't forget that elements don't need a dot in front, only classes do!
+/* FOOTER - not hard to do but I was tired when I attacked that part & got stuck for hours...
 If something's not working as you expect, look over your code before jumping to other solutions.
-Sometimes you're simply missing quotes or a bracket.. */
+Sometimes you're simply missing quotes or a bracket.. 
+Don't forget that elements don't need a dot in front, only classes do! */
 
 footer {
     position: fixed;
@@ -108,7 +123,6 @@ footer {
     color: rgba(0,0,0,.54);
     border-top: 1px solid #e4e4e4;
     display: inline-block;
-    box-sizing: border-box;
 }
 
 .footer1 {
