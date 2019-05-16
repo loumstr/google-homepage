@@ -64,11 +64,6 @@ button:hover {
     border: 1px solid #5F6368;
 }
 
-/* I struggled to center the elements. 
-I tried margin:auto and dividing the page into a grid. None of these worked satisfyingly. 
-The fixed position is useful in so far that the elements don't move when you resize the window from side to side.
-But they DO collapse into each other when you move shrink the browser vertically.*/
-
 main {
     height: 400px;
     width: 500px;
@@ -105,12 +100,6 @@ main {
     width: 100%;
     text-align: center;
 }
-
-
-/* FOOTER - not hard to do but I was tired when I attacked that part & got stuck for hours...
-If something's not working as you expect, look over your code before jumping to other solutions.
-Sometimes you're simply missing quotes or a bracket.. 
-Don't forget that elements don't need a dot in front, only classes do! */
 
 footer {
     position: fixed;
